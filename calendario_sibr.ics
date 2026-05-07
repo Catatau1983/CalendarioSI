@@ -1,0 +1,134 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sangha//Agenda de Praticas v1.0//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Agenda de Práticas
+X-WR-TIMEZONE:America/Sao_Paulo
+BEGIN:VEVENT
+UID:202605-0@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260510T100000
+DTEND;TZID=America/Sao_Paulo:20260510T113000
+SUMMARY:Riwo Sangcho - Prática de Incenso
+DESCRIPTION:2o. Domingo. Oferecimento de incenso. Link: https://us06web.zoom.us/j/87228753661?pwd=cXpMamdnMEc0b1VJSmYxblpKVE9yQT09 ID: 872 2875 3661 Senha: 923866
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-1@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260517T100000
+DTEND;TZID=America/Sao_Paulo:20260517T120000
+SUMMARY:Cerimônia de Korwa Dongtruk
+DESCRIPTION:3o. Domingo. Rezas para falecidos. Link: https://us06web.zoom.us/j/95100893530?pwd=cURpcnpRbUlIMnZXSXFMbklpK2xkZz09 ID: 951 0089 3530 Senha: 773798. Formulário: https://forms.gle/UHFN4JXTt8pwAViY9
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-2@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260523T143000
+DTEND;TZID=America/Sao_Paulo:20260523T163000
+SUMMARY:Tsok Chuva de Bençãos
+DESCRIPTION:Sábado. Sadhana de Guru da Súplica das Sete Linhas. Link: https://us06web.zoom.us/j/87212154138?pwd=TGsrcWJnWDV1Q3c3blp3Q3lSS0NTUT09 ID: 872 1215 4138 Senha: 015965
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-3@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260524T120000
+DTEND;TZID=America/Sao_Paulo:20260524T133000
+SUMMARY:Triratna Anumsrti Sadhana
+DESCRIPTION:4o. Domingo. Acalmar a agitação interna. Link: https://us06web.zoom.us/j/85891276796?pwd=97XMEvXBWjmMRkiWeSM9yZbG2Kz0J6.1 Texto: https://triratnasadhana.org/wp-content/uploads/2024/06/Portuguese-Triratna-Sadhana-June-2024.pdf
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-4@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260527T063000
+DTEND;TZID=America/Sao_Paulo:20260527T073000
+SUMMARY:Riwo Sangcho - Prática de Incenso
+DESCRIPTION:Última quarta-feira. Oferecimento de incenso. Link: https://us06web.zoom.us/j/87228753661?pwd=cXpMamdnMEc0b1VJSmYxblpKVE9yQT09 ID: 872 2875 3661 Senha: 923866
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-5@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260503T190000
+DTEND;TZID=America/Sao_Paulo:20260503T203000
+SUMMARY:Prática de Manjushri
+DESCRIPTION:Todos os domingos. 'A Fala que Deleita o Senhor Manjushri'. Link: https://zoom.us/j/92753971994?pwd=Y3RGRGZHV3UrRmVTeldRZ0YyNkFIdz09 ID: 927 5397 1994 Senha: 977581
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-6@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260510T190000
+DTEND;TZID=America/Sao_Paulo:20260510T203000
+SUMMARY:Prática de Manjushri
+DESCRIPTION:Todos os domingos. 'A Fala que Deleita o Senhor Manjushri'. Link: https://zoom.us/j/92753971994?pwd=Y3RGRGZHV3UrRmVTeldRZ0YyNkFIdz09 ID: 927 5397 1994 Senha: 977581
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-7@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260517T190000
+DTEND;TZID=America/Sao_Paulo:20260517T203000
+SUMMARY:Prática de Manjushri
+DESCRIPTION:Todos os domingos. 'A Fala que Deleita o Senhor Manjushri'. Link: https://zoom.us/j/92753971994?pwd=Y3RGRGZHV3UrRmVTeldRZ0YyNkFIdz09 ID: 927 5397 1994 Senha: 977581
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-8@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260524T190000
+DTEND;TZID=America/Sao_Paulo:20260524T203000
+SUMMARY:Prática de Manjushri
+DESCRIPTION:Todos os domingos. 'A Fala que Deleita o Senhor Manjushri'. Link: https://zoom.us/j/92753971994?pwd=Y3RGRGZHV3UrRmVTeldRZ0YyNkFIdz09 ID: 927 5397 1994 Senha: 977581
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-9@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260531T190000
+DTEND;TZID=America/Sao_Paulo:20260531T203000
+SUMMARY:Prática de Manjushri
+DESCRIPTION:Todos os domingos. 'A Fala que Deleita o Senhor Manjushri'. Link: https://zoom.us/j/92753971994?pwd=Y3RGRGZHV3UrRmVTeldRZ0YyNkFIdz09 ID: 927 5397 1994 Senha: 977581
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-10@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260505T193000
+DTEND;TZID=America/Sao_Paulo:20260505T210000
+SUMMARY:Prática de Tangtong Guialpo
+DESCRIPTION:Todas as terças-feiras. Link: https://us06web.zoom.us/j/81618181873 ID: 816 1818 1873
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-11@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260512T193000
+DTEND;TZID=America/Sao_Paulo:20260512T210000
+SUMMARY:Prática de Tangtong Guialpo
+DESCRIPTION:Todas as terças-feiras. Link: https://us06web.zoom.us/j/81618181873 ID: 816 1818 1873
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-12@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260519T193000
+DTEND;TZID=America/Sao_Paulo:20260519T210000
+SUMMARY:Prática de Tangtong Guialpo
+DESCRIPTION:Todas as terças-feiras. Link: https://us06web.zoom.us/j/81618181873 ID: 816 1818 1873
+LOCATION:Zoom
+END:VEVENT
+BEGIN:VEVENT
+UID:202605-13@sangha.agenda
+DTSTAMP:20260507T225000Z
+DTSTART;TZID=America/Sao_Paulo:20260526T193000
+DTEND;TZID=America/Sao_Paulo:20260526T210000
+SUMMARY:Prática de Tangtong Guialpo
+DESCRIPTION:Todas as terças-feiras. Link: https://us06web.zoom.us/j/81618181873 ID: 816 1818 1873
+LOCATION:Zoom
+END:VEVENT
+END:VCALENDAR
