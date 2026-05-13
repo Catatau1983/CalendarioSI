@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sincronizando Calendário...</title>
+    <title>Sincronização de Calendário</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; color: #333; }
-        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 2s linear infinite; margin: 10px auto; }
+        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f7f9; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; text-align: center; color: #333; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 400px; width: 100%; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .hidden { display: none !important; }
+        .btn { display: block; width: 100%; padding: 12px; margin: 10px 0; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; font-size: 14px; transition: 0.3s; box-sizing: border-box; }
+        .btn-primary { background-color: #3498db; color: white; }
+        .btn-secondary { background-color: #ecf0f1; color: #2c3e50; border: 1px solid #bdc3c7; }
+        .btn:active { transform: scale(0.98); }
+        .url-box { background: #f9f9f9; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 10px; word-break: break-all; margin: 10px 0; border: 1px dashed #ccc; color: #555; }
+        .obs { font-size: 12px; color: #666; text-align: left; margin-top: 20px; line-height: 1.5; border-top: 1px solid #eee; padding-top: 15px; }
+        h2 { font-size: 1.2rem; margin-top: 0; }
     </style>
 </head>
 <body>
-    <div>
-        <div class="loader"></div>
-        <p>Identificando seu dispositivo...</p>
-        <p id="msg" style="font-size: 0.8em; color: #666;"></p>
+
+    <div class="container">
+        <!-- Tela de Carregamento -->
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p id="status-msg">Identificando seu dispositivo...</p>
+        </div>
+
+        <!-- Painel Android -->
+        <div id="android-options" class="hidden">
+            <h2>Configurar Calendário</h2>
+            <p style="font-size: 14px;">Escolha como deseja adicionar os eventos ao seu Android:</p>
+            
+            <div style="margin-top: 20px;">
+                <strong>Opção 1: Assinar (Automático)</strong>
+                <p style="font-size: 13px; color: #555; margin-bottom: 5px;">Copie o link e adicione-o ao seu Google Agenda (via PC) em "Adicionar por URL".</p>
+                <div class="url-box" id="url-text">https://raw.githubusercontent.com/Catatau1983/CalendarioSI/refs/heads/main/calendario_sibr.ics</div>
+                <button class="btn btn-primary" onclick="copyURL()">Copiar Endereço do Link</button>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <strong>Opção 2: Baixar (Estático)</strong>
+                <a href="https://raw.githubusercontent.com/Catatau1983/CalendarioSI/refs/heads/main/calendario_sibr.ics" class="btn btn-secondary">Fazer Download do Arquivo .ICS</a>
+            </div>
+
+            <div class="obs">
+                [*] <strong>Informação Importante:</strong><br><br>
+                • <strong>Copiando o link:</strong> Qualquer alteração ou novo evento que for adicionado aparecerá automaticamente no seu calendário.<br><br>
+                • <strong>Fazendo o download:</strong> O calendário será estático e a atualização deverá ser feita manualmente a cada mês pelo mesmo link.
+            </div>
+        </div>
     </div>
 
     <script>
-        // --- CONFIGURAÇÃO: COLOQUE SEU LINK RAW DO GITHUB AQUI ---
+        // Link Centralizado
         const LINK_CALENDARIO = "https://raw.githubusercontent.com/Catatau1983/CalendarioSI/refs/heads/main/calendario_sibr.ics";
-        // -------------------------------------------------------
-
+        
+        // Detecção de sistema
         const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
-        const msgElement = document.getElementById('msg');
+        
+        const loadingScreen = document.getElementById('loading-screen');
+        const androidOptions = document.getElementById('android-options');
+        const statusMsg = document.getElementById('status-msg');
 
         setTimeout(() => {
             if (isApple) {
-                // Para Apple: Força o protocolo webcal://
+                statusMsg.innerText = "Abrindo Calendário do iOS...";
+                // Converte para protocolo de assinatura da Apple
                 const webcalLink = LINK_CALENDARIO.replace("https://", "webcal://");
                 window.location.href = webcalLink;
-                msgElement.innerText = "Abrindo o Calendário do iOS...";
             } else {
-                // Para Android/Outros: Mantém HTTPS para download ou importação
-                window.location.href = LINK_CALENDARIO;
-                msgElement.innerText = "Iniciando download para Android/Google Agenda...";
+                // Mostra painel de instruções para Android
+                loadingScreen.classList.add('hidden');
+                androidOptions.classList.remove('hidden');
             }
-        }, 1500); // Pequeno atraso para garantir que o navegador processe a ação
+        }, 1500);
+
+        function copyURL() {
+            const urlText = document.getElementById('url-text').innerText;
+            navigator.clipboard.writeText(urlText).then(() => {
+                alert("Link copiado! Agora basta colá-lo na configuração de URL do seu Google Agenda (pelo computador).");
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+            });
+        }
     </script>
 </body>
 </html>
