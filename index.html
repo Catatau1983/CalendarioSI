@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronizando Calendário...</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; color: #333; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 2s linear infinite; margin: 10px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="loader"></div>
+        <p>Identificando seu dispositivo...</p>
+        <p id="msg" style="font-size: 0.8em; color: #666;"></p>
+    </div>
+
+    <script>
+        // --- CONFIGURAÇÃO: COLOQUE SEU LINK RAW DO GITHUB AQUI ---
+        const LINK_CALENDARIO = "https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/calendario.ics";
+        // -------------------------------------------------------
+
+        const isApple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+        const msgElement = document.getElementById('msg');
+
+        setTimeout(() => {
+            if (isApple) {
+                // Para Apple: Força o protocolo webcal://
+                const webcalLink = LINK_CALENDARIO.replace("https://", "webcal://");
+                window.location.href = webcalLink;
+                msgElement.innerText = "Abrindo o Calendário do iOS...";
+            } else {
+                // Para Android/Outros: Mantém HTTPS para download ou importação
+                window.location.href = LINK_CALENDARIO;
+                msgElement.innerText = "Iniciando download para Android/Google Agenda...";
+            }
+        }, 1500); // Pequeno atraso para garantir que o navegador processe a ação
+    </script>
+</body>
+</html>
